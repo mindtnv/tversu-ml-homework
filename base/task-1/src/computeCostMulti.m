@@ -1,4 +1,4 @@
-﻿function J = computeCostMulti(X, y, theta)
+function J = computeCostMulti(X, y, theta)
 %COMPUTECOSTMULTI Вычисляет значение функции стоимости многофакторной
 %   линейной регрессии
 

@@ -1,4 +1,4 @@
-﻿%% Initialization
+%% Initialization
 
 %% ================ Part 1: Feature Normalization ================
 

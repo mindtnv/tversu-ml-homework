@@ -1,4 +1,4 @@
-﻿%% Initialization
+%% Initialization
 clear ; close all; clc
 
 

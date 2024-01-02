@@ -1,4 +1,4 @@
-﻿function [theta, J_history] = gradientDescent(X, y, theta, alpha, num_iters)
+function [theta, J_history] = gradientDescent(X, y, theta, alpha, num_iters)
 %GRADIENTDESCENT Использует градиентный спуск для поиска параметров theta,
 %   используя num_iters итераций и скорость обучения alpha
 

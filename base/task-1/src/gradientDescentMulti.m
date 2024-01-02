@@ -1,4 +1,4 @@
-﻿function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)
+function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)
 %GRADIENTDESCENTMULTI Использует градиентный спуск для поиска параметров theta
 
 % Инициализация полезных переменных

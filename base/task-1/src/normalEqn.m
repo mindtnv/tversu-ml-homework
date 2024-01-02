@@ -1,4 +1,4 @@
-﻿function [theta] = normalEqn(X, y)
+function [theta] = normalEqn(X, y)
 %NORMALEQN Вычисляет вектор theta с помощью нормального уравнения
 
 % Вы должны вернуть корректные значения следующих переменных  

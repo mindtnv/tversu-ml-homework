@@ -1,4 +1,4 @@
-﻿function [X_norm, mu, sigma] = featureNormalize(X)
+function [X_norm, mu, sigma] = featureNormalize(X)
 %FEATURENORMALIZE Нормализует признаки X 
 
 % Вы должны вернуть корректные значения следующих переменных
