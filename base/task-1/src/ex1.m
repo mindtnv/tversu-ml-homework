@@ -1,9 +1,9 @@
-%% Initialization
+п»ї%% Initialization
 clear ; close all; clc
 
 
 %% ======================= Part 1: Plotting =======================
-fprintf('Визуализируем данные ...\n')
+fprintf('Р’РёР·СѓР°Р»РёР·РёСЂСѓРµРј РґР°РЅРЅС‹Рµ ...\n')
 data = load('ex1data1.txt');
 X = data(:, 1); y = data(:, 2);
 m = length(y); % number of training examples
@@ -12,7 +12,7 @@ m = length(y); % number of training examples
 % Note: You have to complete the code in plotData.m
 plotData(X, y);
 
-fprintf('Нажмитие Enter, чтобы продолжить.\n');
+fprintf('РќР°Р¶РјРёС‚РёРµ Enter, С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ.\n');
 pause;
 
 %% =================== Part 2: Cost and Gradient descent ===================
@@ -24,49 +24,49 @@ theta = zeros(2, 1); % initialize fitting parameters
 iterations = 1500;
 alpha = 0.01;
 
-fprintf('\nТестируем функцию стоимости ...\n')
+fprintf('\nРўРµСЃС‚РёСЂСѓРµРј С„СѓРЅРєС†РёСЋ СЃС‚РѕРёРјРѕСЃС‚Рё ...\n')
 % compute and display initial cost
 J = computeCost(X, y, theta);
-fprintf('С theta = [0 ; 0]\nвычисленная стоимость = %f\n', J);
-fprintf('Ожидаемая стоимость (примерно) 32.07\n');
+fprintf('РЎ theta = [0 ; 0]\nРІС‹С‡РёСЃР»РµРЅРЅР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ = %f\n', J);
+fprintf('РћР¶РёРґР°РµРјР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ (РїСЂРёРјРµСЂРЅРѕ) 32.07\n');
 
 % further testing of the cost function
 J = computeCost(X, y, [-1 ; 2]);
-fprintf('\nС theta = [-1 ; 2]\nвычисленная стоимость = %f\n', J);
-fprintf('Ожидаемая стоимость (примерно) 54.24\n');
+fprintf('\nРЎ theta = [-1 ; 2]\nРІС‹С‡РёСЃР»РµРЅРЅР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ = %f\n', J);
+fprintf('РћР¶РёРґР°РµРјР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ (РїСЂРёРјРµСЂРЅРѕ) 54.24\n');
 
-fprintf('Нажмитие Enter, чтобы продолжить.\n');
+fprintf('РќР°Р¶РјРёС‚РёРµ Enter, С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ.\n');
 pause;
 
-fprintf('\nВыполняем градиентный спуск ...\n')
+fprintf('\nР’С‹РїРѕР»РЅСЏРµРј РіСЂР°РґРёРµРЅС‚РЅС‹Р№ СЃРїСѓСЃРє ...\n')
 % run gradient descent
 theta = gradientDescent(X, y, theta, alpha, iterations);
 
 % print theta to screen
-fprintf('Theta, найденное градиентным спуском:\n');
+fprintf('Theta, РЅР°Р№РґРµРЅРЅРѕРµ РіСЂР°РґРёРµРЅС‚РЅС‹Рј СЃРїСѓСЃРєРѕРј:\n');
 fprintf('%f\n', theta);
-fprintf('Ожидаемое значение theta (примерно)\n');
+fprintf('РћР¶РёРґР°РµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ theta (РїСЂРёРјРµСЂРЅРѕ)\n');
 fprintf(' -3.6303\n  1.1664\n\n');
 
 % Plot the linear fit
 hold on; % keep previous plot visible
 plot(X(:,2), X*theta, '-')
-legend('Обучающая выборка', 'Линейная регрессия')
+legend('РћР±СѓС‡Р°СЋС‰Р°СЏ РІС‹Р±РѕСЂРєР°', 'Р›РёРЅРµР№РЅР°СЏ СЂРµРіСЂРµСЃСЃРёСЏ')
 hold off % don't overlay any more plots on this figure
 
 % Predict values for population sizes of 35,000 and 70,000
 predict1 = [1, 3.5] *theta;
-fprintf('Для населения = 35,000, мы прогнозируем прибыль %f\n',...
+fprintf('Р”Р»СЏ РЅР°СЃРµР»РµРЅРёСЏ = 35,000, РјС‹ РїСЂРѕРіРЅРѕР·РёСЂСѓРµРј РїСЂРёР±С‹Р»СЊ %f\n',...
     predict1*10000);
 predict2 = [1, 7] * theta;
-fprintf('Для населения = 70,000, мы прогнозируем прибыль %f\n',...
+fprintf('Р”Р»СЏ РЅР°СЃРµР»РµРЅРёСЏ = 70,000, РјС‹ РїСЂРѕРіРЅРѕР·РёСЂСѓРµРј РїСЂРёР±С‹Р»СЊ %f\n',...
     predict2*10000);
 
-fprintf('Нажмитие Enter, чтобы продолжить.\n');
+fprintf('РќР°Р¶РјРёС‚РёРµ Enter, С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ.\n');
 pause;
 
 %% ============= Part 3: Visualizing J(theta_0, theta_1) =============
-fprintf('Визуализируем J(theta_0, theta_1) ...\n')
+fprintf('Р’РёР·СѓР°Р»РёР·РёСЂСѓРµРј J(theta_0, theta_1) ...\n')
 
 % Grid over which we will calculate J
 theta0_vals = linspace(-10, 10, 100);
