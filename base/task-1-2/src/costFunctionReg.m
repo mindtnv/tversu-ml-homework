@@ -13,10 +13,11 @@ grad = zeros(size(theta));
 % Замечание: grad должен иметь те же размерности, что и theta
 
 
-
-
-
-
+h = sigmoid(X * theta);
+J = (-1/m) * sum(y .* log(h) + (1 - y) .* log(1 - h));
+grad = (1/m) * X' * (h - y);
+grad(2:end) = grad(2:end) + (lambda/m) * theta(2:end);
+J = J + (lambda/(2*m)) * sum(theta(2:end).^2);
 
 % ====================== КОНЕЦ ВАШЕГО КОДА ======================
 
